@@ -1,23 +1,43 @@
-import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+<!DOCTYPE html>
+<html>
 
-export default function Home() {
-  return (
-    <div className="container">
-      <Head>
-        <title>Next.js Starter!</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+<head>
+	<title>full screen iframe</title>
+	<style type="text/css">
+		html {
+			overflow: auto;
+		}
+		
+		html,
+		body,
+		div,
+		iframe {
+			margin: 0px;
+			padding: 0px;
+			height: 100%;
+			border: none;
+		}
+		
+		iframe {
+			display: block;
+			width: 100%;
+			border: none;
+			overflow-y: auto;
+			overflow-x: hidden;
+		}
+	</style>
+</head>
 
-      <main>
-        <Header title="Welcome to my app!" />
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-      </main>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTQ_WGRtbJspyItEUa1iskOETAD8kh-Beq1gIuepwOXU12NbyDSY286fvcjzAc6Fcd8T0T8r9Dz2DCk/pubhtml?widget=true&amp;headers=false"></iframe>
-      <Footer />
-    </div>
-  )
-}
+<body>
+	<iframe src="https://docs.google.com/spreadsheets/d/12o1NoJOjsaCVyhl0XXmtQrq29oTNosyft0CGU80WBw4/edit#gid=0"
+			frameborder="0"
+			marginheight="0"
+			marginwidth="0"
+			width="100%"
+			height="100%"
+			scrolling="auto">
+</iframe>
+
+</body>
+
+</html>
